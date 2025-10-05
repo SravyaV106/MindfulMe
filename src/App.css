@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.app-layout {
+  display: flex;
+  background: #fff;
+  color: #000;
+  height: 100vh;
+  overflow: hidden; 
+}
+
+.sidebar {
+  position: fixed;
+  height: 100vh;
+  width: 16rem;
+  background: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+   
+}
+
+.page-container {
+  margin-left: 241px; 
+  flex: 1;
+  padding: 1.5rem;
+  height: 100vh;
+  overflow-y: auto;  
+}
+
+/* Main Layout */
+.app-container {
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+  color: #000000;
+  height: 100vh;
+}
+
+
+
+/* Sidebar Header */
+.sidebar-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 0.5rem;
+}
+
+.sidebar-logo {
+  background: linear-gradient(to right, #2597F7, #00E6FA);
+  padding: 1rem;
+  border-radius: 1.5rem;
+}
+
+.sidebar-logo i {
+  color: white;
+  font-size: 1.25rem;
+}
+
+.sidebar-title {
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #13395e;
+}
+
+.sidebar-subtitle {
+  font-size: 0.9rem;
+  color: #6b7280; /* gray-500 */
+  margin: 0;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+  padding: 0 1rem;
+}
+
+.menu i {
+  margin-right: 0.5rem;
+}
+
