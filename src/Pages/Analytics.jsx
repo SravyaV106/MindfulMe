@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo} from 'react';
 import AIanalysis from '../Components/analytics/AIanalysis';
 import Card from '../Components/analytics/Card';
 
 const Ansalysis = ({ data }) => {
   const [days, setDays] = useState("Last 7 days");
   
-  const selectedData = data.find((item) => item.label === days) || {};
+  const selectedData = useMemo(() => {
+    return data.find(entry => entry.label === days);
+  }, [days, data]);
 
   return (
     <div className="p-6 w-[77.5vw] mx-auto flex flex-col items-center ml-10 justify-center">

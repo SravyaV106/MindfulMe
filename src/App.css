@@ -20,6 +20,11 @@
    
 }
 
+.Box container active{
+  font-size: larger;
+
+}
+
 .page-container {
   margin-left: 241px; 
   flex: 1;
@@ -28,7 +33,7 @@
   overflow-y: auto;  
 }
 
-/* Main Layout */
+
 .app-container {
   display: flex;
   flex-direction: row;
@@ -38,8 +43,6 @@
 }
 
 
-
-/* Sidebar Header */
 .sidebar-header {
   display: flex;
   flex-direction: row;
@@ -72,7 +75,7 @@
   margin: 0;
 }
 
-/* Menu */
+
 .menu {
   display: flex;
   flex-direction: column;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback} from 'react';
 import Banner from '../Components/journal/Banner';
 import Entry from '../Components/journal/Entry';
 import Add from '../Components/journal/Add';
@@ -34,15 +34,20 @@ const Journal = () => {
     }
   ]);
 
-  const addData = (newItem) => {
-    setData(prev => [...prev, newItem]);
-    closeForm(); 
-  };
+  const addData = useCallback((newItem) => {
+      setData((prev) => [...prev, newItem]);
+      closeForm();
+    }, []);
 
   const [isFormOpen, setIsFormOpen] = useState(false);
 
-  const openForm = () => setIsFormOpen(true);
-  const closeForm = () => setIsFormOpen(false);
+  const openForm = useCallback(() => {
+    setIsFormOpen(true);
+  }, []);
+
+  const closeForm = useCallback(() => {
+    setIsFormOpen(false);
+  }, []);
 
   return (
     <div>
